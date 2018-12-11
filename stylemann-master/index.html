@@ -10,12 +10,12 @@
 
 <body>
     <div class="splash">
-            <video autoplay loop muted class="wrapper__video">
+        <video autoplay loop muted class="wrapper__video">
             <source src="//vimeo-hp-videos.global.ssl.fastly.net/3/3.mp4">
-            </video>
-        </div>
+        </video>
+    </div>
     <header>
-        
+
         <div class="parent_dropdown">
             <div onclick="myFunction()" class="parent_dropbtn">
                 <div class="bar1"></div>
@@ -25,50 +25,35 @@
             <div id="myDropdown" class="parent_dropdown-content">
                 <div class="dropdown">
                     <button class="dropbtn">Services</button>
-                    <div class="dropdown-content">
-                        <a href="#">Bestil tid</a>
-                        <a href="#">Skrædderservice</a>
-                        <a href="#">Bestil hjem</a>
-                        <a href="#">Store størelser</a>
+                    <div class="dropdown-content" id="services">
+                        <a href="bestil-tid.html">Bestil Tid</a>
+
+
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn"><a href="#">Om os</a></button>
+                    <button class="dropbtn"><a href="om-os.html">Om os</a></button>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">Jakkesæt</button>
-                    <div class="dropdown-content">
-                        <a href="#">Jakkesæt til arbejde</a>
-                        <a href="#">Jakkesæt til fest</a>
-                        <a href="#">Skjorter og veste</a>
-                        <a href="#">Bukser</a>
-                        <a href="#">Smoking og kjolesæt</a>
-                        <a href="#">Børnejakkesæt</a>
-                        <a href="#">Funny suits</a>
+                    <div id="jakkesaet" class="dropdown-content">
+
                     </div>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">Accessories</button>
-                    <div class="dropdown-content">
-                        <a href="#">Hatte</a>
-                        <a href="#">Slips og butterfly</a>
-                        <a href="#">Manchetknapper</a>
-                        <a href="#">Bælter</a>
-                        <a href="#">Sko og Sokker</a>
-                        <a href="#">Halstørklæder og hansker</a>
-                        <a href="#">Andet og diverse</a>
+                    <div id="accessories" class="dropdown-content">
+
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">Udklædning</button>
-                    <div class="dropdown-content">
-                        <a href="#">Steampunk</a>
-                        <a href="#">Kvinder</a>
-                        <a href="#">Tilbehør</a>
+                    <button class="dropbtn">Andet</button>
+                    <div id="andet" class="dropdown-content">
+
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn"><a href="#">Kontakt</a></button>
+                    <button class="dropbtn"><a href="kontakt.html">Kontakt</a></button>
                 </div>
             </div>
         </div>
@@ -79,7 +64,13 @@
     <section class="page-container">
 
     </section>
+    <template id="link-button">
+        <a class="link" href="">
+            <p class="link-text">
 
+            </p>
+        </a>
+    </template>
     <template id="home">
         <div class="featured-content">
 
@@ -216,6 +207,77 @@
             })
         }
 
+
+        let indhold;
+        document.addEventListener("DOMContentLoaded", hentJson);
+        async function hentJson() {
+            let myJson2 = await fetch("http://rockbottomproductions.dk/kea/sem2/stylemann/wp-json/wp/v2/indhold");
+            indhold = await myJson2.json();
+            visServices();
+            visJakkesæt();
+            visAccessories();
+            visAndet();
+        }
+
+        function visServices() {
+
+            let dest = document.querySelector("#services"),
+                temp = document.querySelector("#link-button");
+            indhold.forEach(data => {
+                if (data.acf.type.label == "Services") {
+                    let klon = temp.cloneNode(true).content;
+
+                    klon.querySelector(".link-text").textContent = data.acf.overskrift;
+                    klon.querySelector(".link").href = "indhold.html?slug=" + data.slug;
+                    dest.appendChild(klon);
+                }
+            })
+        }
+
+        function visJakkesæt() {
+
+            let dest = document.querySelector("#jakkesaet"),
+                temp = document.querySelector("#link-button");
+            indhold.forEach(data => {
+                if (data.acf.type.label == "Jakkesæt") {
+                    let klon = temp.cloneNode(true).content;
+
+                    klon.querySelector(".link-text").textContent = data.acf.overskrift;
+                    klon.querySelector(".link").href = "indhold.html?slug=" + data.slug;
+                    dest.appendChild(klon);
+                }
+            })
+        }
+
+        function visAccessories() {
+
+            let dest = document.querySelector("#accessories"),
+                temp = document.querySelector("#link-button");
+            indhold.forEach(data => {
+                if (data.acf.type.label == "Accessories") {
+                    let klon = temp.cloneNode(true).content;
+
+                    klon.querySelector(".link-text").textContent = data.acf.overskrift;
+                    klon.querySelector(".link").href = "indhold.html?slug=" + data.slug;
+                    dest.appendChild(klon);
+                }
+            })
+        }
+
+        function visAndet() {
+
+            let dest = document.querySelector("#andet"),
+                temp = document.querySelector("#link-button");
+            indhold.forEach(data => {
+                if (data.acf.type.label == "Andet") {
+                    let klon = temp.cloneNode(true).content;
+
+                    klon.querySelector(".link-text").textContent = data.acf.overskrift;
+                    klon.querySelector(".link").href = "indhold.html?slug=" + data.slug;
+                    dest.appendChild(klon);
+                }
+            })
+        }
     </script>
 </body>
 
