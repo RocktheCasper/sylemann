@@ -1,0 +1,247 @@
+ @import url('https://fonts.googleapis.com/css?family=Arvo');
+ @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+ body {
+     margin: 0;
+ }
+ 
+ .page-container {
+     display: grid;
+     grid-template-columns: 12% auto 12%;
+     grid-template-rows: 500px 500px;
+     grid-gap: 20px;
+     margin: 20px;
+ }
+ 
+ .container1 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     background-color: bisque;
+     display: grid;
+     grid-template-columns: 1fr 70%;
+     grid-template-rows: 50px 70px 200px 200px;
+ }
+ 
+ .container2 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 2;
+     grid-row-end: 3;
+     background-color: blueviolet;
+     display: grid;
+     grid-template-columns: 70% 1fr;
+     grid-template-rows: 50px 70px 200px 200px;
+ }
+ 
+ #overskrift1 {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     font-family: "josefin slab";
+     font-size: 19px;
+ }
+ 
+ #undertitel1 {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 2;
+     grid-row-end: 3;
+     font-family: "josefin slab";
+     font-size: 16px;
+ }
+ 
+ #tekstfelt1 {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 3;
+     grid-row-end: 4;
+     font-family: "arvo";
+     font-size: 15px;
+ }
+ 
+ #tekstfelt2 {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 4;
+     grid-row-end: 5;
+     font-family: "arvo";
+     font-size: 15px;
+ }
+ 
+ .billede1 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 5;
+     margin-bottom: 20px;
+ }
+ 
+ .billede2 {
+     grid-column-start: 1;
+     grid-column-end: 1;
+     grid-row-start: 1;
+     grid-row-end: 5;
+     margin-bottom: 20px;
+ }
+ 
+ #overskrift2 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     font-family: "josefin slab";
+     font-size: 19px;
+ }
+ 
+ #undertitel2 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 2;
+     grid-row-end: 3;
+     font-family: "josefin slab";
+     font-size: 16px;
+ }
+ 
+ #tekstfelt3 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 3;
+     grid-row-end: 4;
+     font-family: "arvo";
+     font-size: 15px;
+ }
+ 
+ #tekstfelt4 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 4;
+     grid-row-end: 5;
+     font-family: "arvo";
+     font-size: 15px;
+ }
+ 
+ img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ 
+ @media only screen and (max-width: 1350px) {
+     .page-container {
+         display: grid;
+         grid-template-columns: auto;
+         grid-template-rows: 500px 500px;
+         grid-gap: 20px;
+         margin: 20px;
+     }
+     .container1 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 1;
+         grid-row-end: 2;
+         display: grid;
+         grid-template-columns: 1fr 70%;
+         grid-template-rows: 50px 70px 200px 200px;
+     }
+     .container2 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 2;
+         grid-row-end: 3;
+         display: grid;
+         grid-template-columns: 70% 1fr;
+         grid-template-rows: 50px 70px 200px 200px;
+     }
+ }
+ 
+ @media only screen and (max-width: 850px) {
+     .page-container {
+         display: grid;
+         grid-template-columns: auto;
+         grid-template-rows: 800px 800px;
+         grid-gap: 20px;
+         margin: 20px;
+     }
+     .container1 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 1;
+         grid-row-end: 2;
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr 1fr 1fr 1fr 50%;
+     }
+     .container2 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 2;
+         grid-row-end: 3;
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: 50% 1fr 1fr 1fr 1fr;
+     }
+     #overskrift1 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 1;
+         grid-row-end: 2;
+     }
+     #undertitel1 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 2;
+         grid-row-end: 3;
+     }
+     #tekstfelt1 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 3;
+         grid-row-end: 4;
+     }
+     #tekstfelt2 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 4;
+         grid-row-end: 5;
+     }
+     .billede1 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 5;
+         grid-row-end: 6;
+         margin: 20px;
+     }
+     .billede2 {
+         grid-column-start: 1;
+         grid-column-end: 1;
+         grid-row-start: 1;
+         grid-row-end: 2;
+         margin: 20px;
+     }
+     #overskrift2 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 2;
+         grid-row-end: 3;
+     }
+     #undertitel2 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 3;
+         grid-row-end: 4;
+     }
+     #tekstfelt3 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 4;
+         grid-row-end: 5;
+     }
+     #tekstfelt4 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 5;
+         grid-row-end: 6;
+     }
+ }

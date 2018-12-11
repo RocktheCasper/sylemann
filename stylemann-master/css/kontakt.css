@@ -1,0 +1,200 @@
+ @import url('https://fonts.googleapis.com/css?family=Arvo');
+ @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+ body {
+     margin: 0;
+ }
+ 
+ iframe {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .page-container {
+     display: grid;
+     grid-template-columns: 12% auto 50% 12%;
+     grid-template-rows: 166px 166px 166px;
+     grid-gap: 20px;
+     margin: 20px;
+ }
+ 
+ #box1 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 2;
+     background-color: bisque;
+     display: grid;
+     grid-template-columns: 60px 1fr;
+     grid-template-rows: 40px 1fr;
+ }
+ 
+ #box2 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 2;
+     grid-row-end: 3;
+     background-color: salmon;
+     display: grid;
+     grid-template-columns: 60px 1fr;
+     grid-template-rows: 40px 1fr;
+ }
+ 
+ #box3 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 3;
+     grid-row-end: 4;
+     background-color: lightblue;
+     display: grid;
+     grid-template-columns: 60px 1fr;
+     grid-template-rows: 40px 1fr;
+ }
+ 
+ .google-maps {
+     grid-column-start: 3;
+     grid-column-end: 4;
+     grid-row-start: 1;
+     grid-row-end: 4;
+ }
+ 
+ #icon1 {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 1;
+     grid-row-end: 2;
+ }
+ 
+ #overskrift1 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 2;
+ }
+ 
+ #tekst1 {
+     font-family: "arvo";
+     font-size: 15px;
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 2;
+     grid-row-end: 3;
+ }
+ 
+ #icon2 {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 1;
+     grid-row-end: 2;
+ }
+ 
+ #overskrift2 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 2;
+ }
+ 
+ #tekst2 {
+     font-family: "arvo";
+     font-size: 15px;
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 2;
+     grid-row-end: 3;
+ }
+ 
+ #icon3 {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 1;
+     grid-row-end: 2;
+ }
+ 
+ #overskrift3 {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 2;
+ }
+ 
+ #tekst3 {
+     font-family: "arvo";
+     font-size: 15px;
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 2;
+     grid-row-end: 3;
+ }
+ 
+ h2 {
+     font-family: "Josefin Slab";
+     font-size: 22px;
+ }
+ 
+ @media only screen and (max-width: 1350px) {
+     .page-container {
+         display: grid;
+         grid-template-columns: auto 60%;
+         grid-template-rows: 166px 166px 166px;
+         grid-gap: 20px;
+         margin: 20px;
+     }
+     #box1 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 1;
+         grid-row-end: 2;
+     }
+     #box2 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 2;
+         grid-row-end: 3;
+     }
+     #box3 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 3;
+         grid-row-end: 4;
+     }
+     .google-maps {
+         grid-column-start: 2;
+         grid-column-end: 3;
+         grid-row-start: 1;
+         grid-row-end: 4;
+     }
+ }
+ 
+ @media only screen and (max-width: 850px) {
+     .page-container {
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: 166px 166px 166px 400px;
+         grid-gap: 20px;
+         margin: 20px;
+     }
+     #box1 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 1;
+         grid-row-end: 2;
+     }
+     #box2 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 2;
+         grid-row-end: 3;
+     }
+     #box3 {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 3;
+         grid-row-end: 4;
+     }
+     .google-maps {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 4;
+         grid-row-end: 5;
+     }
+ }
