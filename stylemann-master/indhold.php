@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<?php include "head.html"; ?>
+    <?php include "head.html"; ?>
     <section id="data-container">
         <div id="overskrift"></div>
         <div id="billede"><img class="billede" alt="" src=""></div>
@@ -20,19 +20,19 @@
         let slug = urlParams.get("slug");
         console.log(slug);
 
-        let indhold;
+        let content;
         document.addEventListener("DOMContentLoaded", hentJson);
 
         async function hentJson() {
             let myJson = await fetch("http://rockbottomproductions.dk/kea/sem2/stylemann/wp-json/wp/v2/indhold");
-            indhold = await myJson.json();
+            content = await myJson.json();
             visIndhold();
         }
 
         function visIndhold() {
 
             let dest = document.querySelector("#data-container");
-            indhold.forEach(data => {
+            content.forEach(data => {
                 if (data.slug == slug) {
                     dest.querySelector("#overskrift").innerHTML = "<h2>" + data.acf.overskrift + "</h2>";
                     dest.querySelector(".billede").src = data.acf.billede;
@@ -40,6 +40,7 @@
                 }
             })
         }
+
     </script>
 </body>
 
