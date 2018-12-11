@@ -13,7 +13,7 @@
             width: 3vw;
             max-width: 50px;
             min-width: 20px;
- 
+
         }
     </style>
 </head>
@@ -32,7 +32,7 @@
                     <h2>Info</h2>
                 </div>
                 <div id="tekst1"></div>
-            </div> 
+            </div>
             <div id="box2">
                 <div id="icon2" class="icon"><img alt="" src="http://rockbottomproductions.dk/kea/sem2/stylemann/wp-content/uploads/2018/12/Asset-4.png"></div>
                 <div id="overskrift2">

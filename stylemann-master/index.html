@@ -26,13 +26,13 @@
                 <div class="dropdown">
                     <button class="dropbtn">Services</button>
                     <div class="dropdown-content" id="services">
-                        <a href="bestil-tid.html">Bestil Tid</a>
+                        <a href="bestil-tid.php">Bestil Tid</a>
 
 
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn"><a href="om-os.html">Om os</a></button>
+                    <button class="dropbtn"><a href="om-os.php">Om os</a></button>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">Jakkesæt</button>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn"><a href="kontakt.html">Kontakt</a></button>
+                    <button class="dropbtn"><a href="kontakt.php">Kontakt</a></button>
                 </div>
             </div>
         </div>
@@ -228,7 +228,7 @@
                     let klon = temp.cloneNode(true).content;
 
                     klon.querySelector(".link-text").textContent = data.acf.overskrift;
-                    klon.querySelector(".link").href = "indhold.html?slug=" + data.slug;
+                    klon.querySelector(".link").href = "indhold.php?slug=" + data.slug;
                     dest.appendChild(klon);
                 }
             })
@@ -243,7 +243,7 @@
                     let klon = temp.cloneNode(true).content;
 
                     klon.querySelector(".link-text").textContent = data.acf.overskrift;
-                    klon.querySelector(".link").href = "indhold.html?slug=" + data.slug;
+                    klon.querySelector(".link").href = "indhold.php?slug=" + data.slug;
                     dest.appendChild(klon);
                 }
             })
@@ -258,7 +258,7 @@
                     let klon = temp.cloneNode(true).content;
 
                     klon.querySelector(".link-text").textContent = data.acf.overskrift;
-                    klon.querySelector(".link").href = "indhold.html?slug=" + data.slug;
+                    klon.querySelector(".link").href = "indhold.php?slug=" + data.slug;
                     dest.appendChild(klon);
                 }
             })
@@ -273,7 +273,7 @@
                     let klon = temp.cloneNode(true).content;
 
                     klon.querySelector(".link-text").textContent = data.acf.overskrift;
-                    klon.querySelector(".link").href = "indhold.html?slug=" + data.slug;
+                    klon.querySelector(".link").href = "indhold.php?slug=" + data.slug;
                     dest.appendChild(klon);
                 }
             })
