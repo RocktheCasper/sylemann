@@ -31,7 +31,7 @@
         <div id="billede"><img class="billede" alt="" src=""></div>
     </template>
     <script>
-        let jsonFile;
+        let jsonBestil;
 
         document.addEventListener("DOMContentLoaded", getJson);
 
@@ -39,7 +39,7 @@
 
             let myJson = await fetch("http://rockbottomproductions.dk/kea/sem2/stylemann/wp-json/wp/v2/bestil_tid");
 
-            jsonFile = await myJson.json();
+            jsonBestil = await myJson.json();
 
             bestilIndhold();
         }
