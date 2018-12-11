@@ -15,6 +15,7 @@
             min-width: 20px;
 
         }
+
     </style>
 </head>
 
@@ -24,7 +25,7 @@
         <section class="page-container">
 
         </section>
-<?php include "footer.html"; ?>
+        <?php include "footer.html"; ?>
         <template id="kontakt">
             <div id="box1">
                 <div id="icon1" class="icon"><img alt="" src="http://rockbottomproductions.dk/kea/sem2/stylemann/wp-content/uploads/2018/12/Asset-3.png"></div>
@@ -51,9 +52,7 @@
         </template>
     </main>
     <script>
-        let dest = document.querySelector(".page-container");
-
-        let jsonFile;
+        let jsonKontakt;
 
 
         document.addEventListener("DOMContentLoaded", getJson);
@@ -62,7 +61,7 @@
 
             let myJson = await fetch("http://rockbottomproductions.dk/kea/sem2/stylemann/wp-json/wp/v2/kontakt");
 
-            jsonFile = await myJson.json();
+            jsonKontakt = await myJson.json();
 
             visIndhold();
         }
@@ -74,7 +73,7 @@
 
             let klon = temp.cloneNode(true).content;
 
-            jsonFile.forEach(indholdData => {
+            jsonKontakt.forEach(indholdData => {
 
                 klon.querySelector("#tekst1").innerHTML = "<p>" + indholdData.acf.info + "</p>";
                 klon.querySelector("#tekst2").innerHTML = "<p>" + indholdData.acf.abningstider + "</p>";
@@ -83,6 +82,7 @@
                 dest.appendChild(klon);
             })
         }
+
     </script>
 </body>
 
