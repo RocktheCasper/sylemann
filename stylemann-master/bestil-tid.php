@@ -41,10 +41,10 @@
 
             jsonFile = await myJson.json();
 
-            visIndhold();
+            bestilIndhold();
         }
 
-        function visIndhold() {
+        function bestilIndhold() {
 
             let dest = document.querySelector(".page-container"),
                 temp = document.querySelector("#bestil-tid");
