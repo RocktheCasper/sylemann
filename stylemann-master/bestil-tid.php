@@ -51,7 +51,7 @@
 
             let klon = temp.cloneNode(true).content;
 
-            jsonFile.forEach(indholdData => {
+            jsonBestil.forEach(indholdData => {
                 klon.querySelector("#overskrift").innerHTML = "<h2>" + indholdData.acf.overskrift + "</h2>";
                 klon.querySelector(".billede").src = indholdData.acf.billede;
 
